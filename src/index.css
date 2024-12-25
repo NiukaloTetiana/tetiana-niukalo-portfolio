@@ -2,6 +2,108 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Fonts */
+@font-face {
+  font-family: "Mona Sans";
+  src:
+    url("./assets/fonts/MonaSans-Regular.woff2") format("woff2"),
+    url("./assets/fonts/MonaSans-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Mona Sans";
+  src:
+    url("./assets/fonts/MonaSans-Medium.woff2") format("woff2"),
+    url("./assets/fonts/MonaSans-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Mona Sans";
+  src:
+    url("./assets/fonts/MonaSans-Bold.woff2") format("woff2"),
+    url("./assets/fonts/MonaSans-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Mona Sans";
+  src:
+    url("./assets/fonts/MonaSans-Light.woff2") format("woff2"),
+    url("./assets/fonts/MonaSans-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Druk Cyr";
+  src:
+    url("./assets/fonts/DrukCyr-Bold.woff2") format("woff2"),
+    url("./assets/fonts/DrukCyr-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Druk Cyr";
+  src:
+    url("./assets/fonts/DrukCyr-Heavy.woff2") format("woff2"),
+    url("./assets/fonts/DrukCyr-Heavy.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Themes */
+
+html[data-theme="light"] {
+  --accent-color: #72b63b;
+  --white-color: #fff;
+  --light-color: #f3f3f3;
+  --hover-color: #5ba221;
+  --text-color: #2e2e36;
+  --second-text-color: #69696e;
+  --border-color: #191a154d;
+  --bg-first-color: #fbfbfb;
+  --bg-second-color: #00c02da6;
+  --bg-body-color: #fff;
+  --shadow-color: #0000001a;
+  --shadow-color-light: #0000000d;
+}
+
+html[data-theme="dark"] {
+  --accent-color: #72b63b;
+  --white-color: #2f3333;
+  --light-color: #616262;
+  --hover-color: #5ba221;
+  --text-color: #fafafa;
+  --second-text-color: #a7a8aa;
+  --border-color: #e6e5ea19;
+  --bg-first-color: #171d26;
+  --bg-second-color: #2e2e36;
+  --bg-body-color: #69696e;
+  --shadow-color: #ffffff1a;
+  --shadow-color-light: #ffffff0d;
+}
+
+/* --------------- */
+
 body {
-  background-color: slategrey;
+  @apply bg-bgBodyColor;
+
+  font-family: "Mona Sans", sans-serif;
+  font-weight: 500;
+}
+
+input {
+  @apply outline-none;
 }
