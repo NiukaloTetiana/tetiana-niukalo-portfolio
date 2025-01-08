@@ -1,6 +1,7 @@
 import AnimatedCursor from "react-animated-cursor";
 
 import { ThemeToggle } from "./ThemeToggle";
+import { SideBar } from "./SideBar";
 
 export const App = () => {
   return (
@@ -14,7 +15,7 @@ export const App = () => {
         innerScale={1}
         outerScale={1.7}
       />
-      <h1 className="text-4xl text-textColor">PORTFOLIO</h1>
+      <SideBar />
     </>
   );
 };

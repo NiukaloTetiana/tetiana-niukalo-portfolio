@@ -11,10 +11,10 @@ export const ThemeToggle = () => {
     <DarkModeSwitch
       checked={isDarkMode}
       onChange={toggleTheme}
-      size={40}
+      size={30}
       moonColor="#fafafa"
       sunColor="#2e2e36"
-      className="fixed right-5 top-5"
+      className="fixed right-5 top-5 md:right-9 md:top-9 md:size-10"
     />
   );
 };

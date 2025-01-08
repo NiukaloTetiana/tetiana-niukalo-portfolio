@@ -25,7 +25,7 @@ export default {
         default: "0 4px 6px var(--shadow-color)",
         sm: "0 4px 6px var(--shadow-color-light)",
         md: "0 6px 8px var(--shadow-color)",
-        lg: "0 10px 15px var(--shadow-color)",
+        lg: "0 0 47px var(--shadow-color)",
       },
       fontFamily: {
         fontPrimary: ["Mona Sans", "sans-serif"],
