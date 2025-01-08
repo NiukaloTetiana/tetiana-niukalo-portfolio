@@ -88,7 +88,7 @@ html[data-theme="dark"] {
   --text-color: #fafafa;
   --second-text-color: #a7a8aa;
   --border-color: #e6e5ea19;
-  --bg-first-color: #171d26;
+  --bg-first-color: #1f2836;
   --bg-second-color: #06090c;
   --bg-body-color: #aeaeae;
   --shadow-color: #ffffff1a;
@@ -98,7 +98,7 @@ html[data-theme="dark"] {
 /* --------------- */
 
 body {
-  @apply bg-bgBodyColor;
+  @apply bg-bgBodyColor bg-gradient-to-r from-bgFirstColor to-bgSecondColor;
 
   font-family: "Mona Sans", sans-serif;
   font-weight: 500;
