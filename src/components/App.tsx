@@ -1,7 +1,7 @@
 import AnimatedCursor from "react-animated-cursor";
 
 import { ThemeToggle } from "./ThemeToggle";
-import { SideBar } from "./SideBar";
+import { ScrollUpButton, Sidebar } from "../components";
 
 export const App = () => {
   return (
@@ -15,7 +15,9 @@ export const App = () => {
         innerScale={1}
         outerScale={1.7}
       />
-      <SideBar />
+      <Sidebar />
+
+      <ScrollUpButton />
     </>
   );
 };

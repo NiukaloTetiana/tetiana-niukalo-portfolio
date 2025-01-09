@@ -9,15 +9,7 @@ export const useTheme = () => {
   useLayoutEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
     localStorage.setItem("theme", theme);
-    updateFavicon(theme);
   }, [theme]);
-
-  const updateFavicon = (theme: string) => {
-    const favicon = document.getElementById("favicon") as HTMLLinkElement;
-    if (favicon) {
-      favicon.href = `/favicon-${theme}.ico`;
-    }
-  };
 
   const toggleTheme = () => {
     setTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));
