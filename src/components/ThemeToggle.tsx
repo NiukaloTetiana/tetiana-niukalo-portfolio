@@ -14,7 +14,7 @@ export const ThemeToggle = () => {
       size={30}
       moonColor="#fafafa"
       sunColor="#2e2e36"
-      className="fixed left-5 top-5 z-[10] md:left-9 md:top-9 md:size-10"
+      className="hover:text- custom-transition fixed left-5 top-5 z-[10] !cursor-none focus-visible:text-accentColor md:left-9 md:top-9 md:size-10"
     />
   );
 };

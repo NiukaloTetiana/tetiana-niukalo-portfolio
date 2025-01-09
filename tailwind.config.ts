@@ -24,8 +24,8 @@ export default {
       boxShadow: {
         default: "0 4px 6px var(--shadow-color)",
         sm: "0 4px 6px var(--shadow-color-light)",
-        md: "0 6px 8px var(--shadow-color)",
-        lg: "0 0 47px var(--shadow-color)",
+        md: "0 0 4px var(--shadow-color)",
+        lg: "0 0 32px var(--shadow-color)",
       },
       fontFamily: {
         fontPrimary: ["Mona Sans", "sans-serif"],
@@ -66,7 +66,7 @@ export default {
             bottom: "0",
             width: "100%",
             height: "2px",
-            backgroundColor: "#54be96",
+            backgroundColor: "#72b63b",
             transition: "transform 0.7s",
             transformOrigin: "right",
             transform: "scaleX(0)",
