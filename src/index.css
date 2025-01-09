@@ -6,6 +6,16 @@
 @font-face {
   font-family: "Mona Sans";
   src:
+    url("./assets/fonts/MonaSans-Light.woff2") format("woff2"),
+    url("./assets/fonts/MonaSans-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Mona Sans";
+  src:
     url("./assets/fonts/MonaSans-Regular.woff2") format("woff2"),
     url("./assets/fonts/MonaSans-Regular.woff") format("woff");
   font-weight: 400;
@@ -29,16 +39,6 @@
     url("./assets/fonts/MonaSans-Bold.woff2") format("woff2"),
     url("./assets/fonts/MonaSans-Bold.woff") format("woff");
   font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Mona Sans";
-  src:
-    url("./assets/fonts/MonaSans-Light.woff2") format("woff2"),
-    url("./assets/fonts/MonaSans-Light.woff") format("woff");
-  font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
@@ -71,7 +71,7 @@ html[data-theme="light"] {
   --light-color: #f3f3f3;
   --hover-color: #5ba221;
   --text-color: #2e2e36;
-  --second-text-color: #a7a8aa;
+  --second-text-color: #a7a8aa97;
   --border-color: #191a154d;
   --bg-first-color: #fbfbfb;
   --bg-second-color: #5ba22196;
@@ -97,6 +97,16 @@ html[data-theme="dark"] {
 
 /* --------------- */
 
+html {
+  scroll-behavior: smooth;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 body {
   @apply bg-bgBodyColor bg-gradient-to-r from-bgFirstColor to-bgSecondColor;
 
@@ -104,6 +114,19 @@ body {
   font-weight: 500;
 }
 
+#root {
+  @apply min-h-screen;
+}
+
 input {
   @apply outline-none;
+}
+
+.title {
+  @apply relative mx-auto w-fit py-14 text-center font-fontSecondary text-[32px] uppercase text-textColor md:py-20 md:text-[56px];
+}
+
+.title::before {
+  content: attr(data-content);
+  @apply absolute left-1/2 top-1/2 z-[-1] -translate-x-1/2 -translate-y-1/2 text-center font-fontPrimary text-[46px] font-bold uppercase text-secondTextColor md:text-[90px];
 }

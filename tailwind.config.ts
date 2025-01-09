@@ -76,6 +76,9 @@ export default {
             transformOrigin: "left",
           },
         },
+        ".custom-transition": {
+          transition: "all 0.3s ease-in",
+        },
       });
     },
   ],

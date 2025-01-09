@@ -2,7 +2,7 @@ import { navItems } from "../constants";
 
 export const Sidebar = () => {
   return (
-    <aside className="custom-transition fixed bottom-0 left-0 h-[62px] w-full bg-bgSecondColor pt-3 shadow-lg md:static md:ml-auto md:h-full md:w-[120px] md:translate-y-1/2 md:bg-transparent md:p-9 md:shadow-none">
+    <aside className="custom-transition fixed bottom-0 left-0 h-[62px] w-full rounded-t-[10px] bg-bgSecondColor pt-3 shadow-lg md:static md:ml-auto md:h-full md:w-[120px] md:translate-y-1/2 md:bg-transparent md:p-9 md:shadow-none">
       <ul className="flex justify-around md:flex-col md:justify-start md:gap-5">
         {navItems.map((item) => (
           <li key={item.path} className="group relative">
