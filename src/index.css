@@ -203,7 +203,7 @@ textarea:-webkit-autofill:focus {
 }
 
 .label {
-  @apply custom-transition absolute -top-5 left-4 transform bg-transparent text-[12px] uppercase text-secondTextColor peer-placeholder-shown:top-[15px] peer-placeholder-shown:text-gray-400 peer-focus:-top-2 peer-focus:text-[10px] peer-focus:text-accentColor md:text-[14px] md:peer-focus:text-[12px];
+  @apply custom-transition absolute -top-5 left-4 transform bg-transparent text-[12px] uppercase text-secondTextColor peer-placeholder-shown:top-[15px] peer-placeholder-shown:text-gray-400 peer-focus:-top-2 peer-focus:text-[10px] peer-focus:text-accentColor md:text-[14px] md:peer-focus:text-[12px] lg:text-[16p];
 }
 
 .error {
