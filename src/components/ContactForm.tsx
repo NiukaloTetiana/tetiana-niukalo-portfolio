@@ -62,10 +62,10 @@ export const ContactForm = () => {
         {errors.message && <p className="error">{errors.message.message}</p>}
       </div>
 
-      <button className="address-label group custom-transition relative z-[9] flex h-[42px] w-[200px] items-center justify-between overflow-hidden rounded-full border border-accentColor bg-transparent py-[14px] pl-6 text-start !text-textColor before:absolute before:inset-0 before:origin-right before:scale-x-0 before:bg-accentColor before:transition-transform before:duration-500 hover:before:z-[8] hover:before:scale-x-100 md:h-[52px]">
+      <button className="address-label group custom-transition relative flex h-[42px] w-[200px] items-center justify-between overflow-hidden rounded-full border border-accentColor bg-transparent py-[14px] pl-6 text-start !text-textColor before:absolute before:inset-0 before:origin-right before:scale-x-0 before:bg-accentColor before:transition-transform before:duration-500 hover:before:z-[-1] hover:before:scale-x-100 md:h-[52px]">
         Send message
-        <span className="custom-transition z-[9] flex h-[42px] w-[42px] items-center justify-center rounded-full bg-accentColor md:h-[52px] md:w-[52px]">
-          <MdOutlineArrowOutward className="custom-transition size-5 text-white transition-transform group-hover:-translate-y-10 md:size-[22px]" />
+        <span className="z-9 custom-transition flex h-[42px] w-[42px] items-center justify-center rounded-full bg-accentColor md:h-[52px] md:w-[52px]">
+          <MdOutlineArrowOutward className="custom-transition z-10 size-5 text-white transition-transform group-hover:-translate-y-10 group-hover:translate-x-4 md:size-[22px]" />
         </span>
       </button>
     </form>
