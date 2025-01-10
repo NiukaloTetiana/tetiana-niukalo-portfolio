@@ -5,3 +5,5 @@ export * from "./ScrollUpButton";
 export * from "./Sidebar";
 export * from "./About";
 export * from "./Contact";
+export * from "./InputField";
+export * from "./ContactForm";

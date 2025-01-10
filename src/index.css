@@ -76,7 +76,7 @@ html[data-theme="light"] {
   --bg-first-color: #fbfbfb;
   --bg-second-color: #5ba22196;
   --bg-body-color: #fff;
-  --shadow-color: #dedede;
+  --shadow-color: #5e6c59;
   --shadow-color-light: #0000000d;
 }
 
@@ -96,6 +96,11 @@ html[data-theme="dark"] {
 }
 
 /* --------------- */
+@layer base {
+  * {
+    @apply outline-none;
+  }
+}
 
 html {
   scroll-behavior: smooth;
@@ -118,15 +123,89 @@ body {
   @apply min-h-screen;
 }
 
-input {
-  @apply outline-none;
+a {
+  @apply inline-block text-current no-underline transition duration-300 ease-in-out;
+}
+
+address {
+  @apply not-italic;
+}
+
+a:hover,
+a:focus-visible {
+  @apply text-accentColor;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply m-0;
+}
+
+ul,
+ol {
+  @apply m-0 list-none p-0;
+}
+
+img {
+  @apply block h-auto max-w-full object-cover;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+  box-shadow: 0 0 0px 1000px #fff inset;
+  -webkit-text-fill-color: #1e1e1e !important;
+}
+
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+  box-shadow: 0 0 0px 1000px #fff inset;
+  -webkit-text-fill-color: #1e1e1e !important;
 }
 
 .title {
-  @apply relative mx-auto w-fit py-14 text-center font-fontSecondary text-[32px] uppercase text-textColor md:py-20 md:text-[56px];
+  @apply custom-transition relative mx-auto w-fit py-14 text-center font-fontSecondary text-[32px] uppercase text-textColor md:py-20 md:text-[56px];
 }
 
 .title::before {
   content: attr(data-content);
-  @apply absolute left-1/2 top-1/2 z-[-1] -translate-x-1/2 -translate-y-1/2 text-center font-fontPrimary text-[46px] font-bold uppercase text-secondTextColor md:text-[90px];
+  @apply custom-transition absolute left-1/2 top-1/2 z-[-1] -translate-x-1/2 -translate-y-1/2 text-center font-fontPrimary text-[46px] font-bold uppercase text-secondTextColor md:text-[90px];
+}
+
+.hover {
+  &:hover,
+  &:focus-visible {
+    @apply bg-accentColor shadow-md;
+  }
+}
+
+.contact-item {
+  @apply flex items-center gap-3;
+}
+
+.contact-icon {
+  @apply custom-transition size-6 fill-accentColor md:size-[36px];
+}
+
+.address-label {
+  @apply custom-transition font-fontSecondary text-[18px] font-bold uppercase leading-[0.99] text-bgSecondColor md:text-[20px];
+}
+
+.address-text {
+  @apply custom-transition text-[14px] font-medium leading-[1.44] tracking-[-0.03em] text-textColor md:text-[16px];
+}
+
+.label {
+  @apply custom-transition absolute -top-6 left-5 transform bg-transparent text-[16px] uppercase text-secondTextColor peer-placeholder-shown:top-3 peer-placeholder-shown:text-gray-400 peer-focus:-top-2 peer-focus:text-[14px] peer-focus:text-accentColor;
+}
+
+.error {
+  @apply absolute -bottom-[18px] left-5 text-[8px] text-red-700 md:text-[12px];
 }
