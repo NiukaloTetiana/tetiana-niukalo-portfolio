@@ -61,7 +61,7 @@ export const Contact = () => {
               {socialLinks.map((link, index) => (
                 <li
                   key={index}
-                  className="hover custom-transition size-[36px] rounded-full border-none bg-bgSecondColor shadow-sm md:size-[46px]"
+                  className="hover bg-grayColor custom-transition size-[36px] rounded-full border-none shadow-sm md:size-[46px]"
                 >
                   <a
                     className="flex size-full items-center justify-center"

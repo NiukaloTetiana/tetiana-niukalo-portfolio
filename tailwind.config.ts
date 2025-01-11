@@ -11,7 +11,7 @@ export default {
     extend: {
       colors: {
         accentColor: "var(--accent-color)",
-        whiteColor: "var(--white-color)",
+        grayColor: "var(--gray-color)",
         lightColor: "var(--light-color)",
         hoverColor: "var(--hover-color)",
         textColor: "var(--text-color)",

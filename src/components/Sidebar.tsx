@@ -48,16 +48,16 @@ export const Sidebar = () => {
           <li key={item.path} className="group relative">
             <a href={item.path} onClick={() => setCurrentPath(item.path)}>
               <span
-                className={`custom-transition relative z-[9] flex h-[38px] w-[38px] items-center justify-center rounded-[30px] border-none ${
+                className={`custom-transition relative z-[9] flex h-[38px] w-[38px] items-center justify-center rounded-[30px] border-none shadow-sm ${
                   currentPath === item.path
                     ? "bg-accentColor"
                     : "bg-bgFirstColor"
-                } group-hover:bg-accentColor group-hover:shadow-md group-focus-visible:bg-accentColor group-focus-visible:shadow-md md:h-[48px] md:w-[48px] md:text-[16px]`}
+                } group-hover:bg-hoverColor group-hover:shadow-md group-focus-visible:bg-hoverColor group-focus-visible:shadow-md md:h-[48px] md:w-[48px] md:text-[16px]`}
               >
                 {item.icon}
               </span>
 
-              <span className="custom-transition absolute right-0 top-0 z-[8] hidden h-[38px] rounded-full bg-accentColor pl-4 pr-[50px] text-[16px] opacity-0 group-hover:right-[5px] group-hover:opacity-100 md:flex md:h-[48px] md:items-center md:pr-[60px] md:text-center md:font-fontSecondary md:text-[18px] md:font-medium md:uppercase md:leading-[0.917] md:tracking-[-0.01em] md:text-textColor">
+              <span className="custom-transition absolute right-0 top-0 z-[8] hidden h-[38px] rounded-full bg-hoverColor pl-4 pr-[50px] text-[16px] opacity-0 group-hover:right-[5px] group-hover:opacity-100 md:flex md:h-[48px] md:items-center md:pr-[60px] md:text-center md:font-fontSecondary md:text-[18px] md:font-medium md:uppercase md:leading-[0.917] md:tracking-[-0.01em] md:text-textColor">
                 {item.label}
               </span>
             </a>

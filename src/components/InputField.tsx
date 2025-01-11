@@ -26,10 +26,10 @@ export const InputField = <T extends "input" | "textarea">({
     <div className="relative w-full">
       <Tag
         id={name}
-        className={`peer custom-transition w-full border bg-transparent px-5 py-3 text-[14px] font-medium leading-[1.44] tracking-[-0.03em] text-textColor placeholder-transparent hover:border-accentColor focus-visible:border-accentColor md:py-[14px] md:text-[16px] ${Tag === "input" ? "h-[42px] rounded-full md:h-[48px] lg:h-[52px]" : "h-[150px] resize-none rounded-[30px] align-top md:h-[190px]"} ${
+        className={`peer custom-transition w-full border-[1.5px] bg-transparent px-5 py-3 text-[14px] font-medium leading-[1.44] tracking-[-0.03em] text-textColor placeholder-transparent hover:shadow-sm focus-visible:shadow-sm md:py-[14px] md:text-[16px] ${Tag === "input" ? "h-[42px] rounded-full md:h-[48px] lg:h-[52px]" : "scrollbar h-[168px] resize-none rounded-[30px] align-top md:h-[192px]"} ${
           hasError
-            ? "border-red-700 focus-visible:border-red-700 focus-visible:shadow-sm"
-            : "border-secondTextColor focus-visible:border-accentColor focus-visible:shadow-sm"
+            ? "border-red-700 hover:border-red-600 focus-visible:border-red-600"
+            : "border-accentColor hover:border-hoverColor focus-visible:border-hoverColor"
         }`}
         {...register(name)}
         // eslint-disable-next-line
