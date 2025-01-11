@@ -20,7 +20,7 @@ export const ContactForm = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, dirtyFields },
   } = useForm<ContactFormValues>({
     mode: "onSubmit",
     resolver: yupResolver(contactSchema),
@@ -32,13 +32,14 @@ export const ContactForm = () => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="flex w-full flex-col gap-7 md:gap-9 lg:gap-10"
+      className="flex w-full flex-col gap-8 md:gap-10 lg:gap-11"
     >
-      <div className="flex w-full flex-col gap-7 md:gap-9 lg:flex-row">
+      <div className="flex w-full flex-col gap-7 md:gap-10 lg:flex-row">
         <InputField
           tag="input"
           label="Your name"
           name="name"
+          dirtyFields={dirtyFields}
           placeholder=""
           errors={errors}
           register={register as unknown as UseFormRegister<FieldValues>}
@@ -47,6 +48,7 @@ export const ContactForm = () => {
           tag="input"
           label="Your email"
           name="email"
+          dirtyFields={dirtyFields}
           placeholder=""
           errors={errors}
           register={register as unknown as UseFormRegister<FieldValues>}
@@ -57,13 +59,14 @@ export const ContactForm = () => {
         tag="textarea"
         label="Your message"
         name="message"
+        dirtyFields={dirtyFields}
         placeholder=""
         errors={errors}
         register={register as unknown as UseFormRegister<FieldValues>}
         rows={7}
       />
 
-      <button className="address-label group custom-transition relative flex h-[42px] w-[200px] items-center justify-between overflow-hidden rounded-full border-[1.5px] border-accentColor bg-transparent py-[14px] pl-6 text-start !text-textColor before:absolute before:inset-0 before:origin-right before:scale-x-0 before:bg-hoverColor before:transition-transform before:duration-500 hover:border-hoverColor hover:before:z-[-1] hover:before:scale-x-100 focus-visible:border-hoverColor md:h-[52px]">
+      <button className="address-label group custom-transition relative flex h-[42px] w-[200px] items-center justify-between overflow-hidden rounded-full border-[1.3px] border-accentColor bg-transparent py-[14px] pl-6 text-start !text-textColor before:absolute before:inset-0 before:origin-right before:scale-x-0 before:bg-hoverColor before:transition-transform before:duration-500 hover:border-hoverColor hover:before:z-[-1] hover:before:scale-x-100 focus-visible:border-hoverColor md:h-[52px]">
         Send message
         <span className="custom-transition relative h-[42px] w-[42px] overflow-hidden rounded-full bg-accentColor shadow-sm group-hover:bg-hoverColor group-hover:shadow-md group-focus-visible:bg-hoverColor group-focus-visible:shadow-md md:h-[52px] md:w-[52px]">
           <MdOutlineArrowOutward className="custom-transition absolute left-1/2 top-1/2 z-10 size-5 -translate-x-1/2 -translate-y-1/2 fill-textColor group-hover:-translate-y-10 group-hover:translate-x-8 md:size-[22px]" />

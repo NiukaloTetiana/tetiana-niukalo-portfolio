@@ -12,7 +12,6 @@ export default {
       colors: {
         accentColor: "var(--accent-color)",
         grayColor: "var(--gray-color)",
-        lightColor: "var(--light-color)",
         hoverColor: "var(--hover-color)",
         textColor: "var(--text-color)",
         secondTextColor: "var(--second-text-color)",

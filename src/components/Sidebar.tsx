@@ -49,9 +49,7 @@ export const Sidebar = () => {
             <a href={item.path} onClick={() => setCurrentPath(item.path)}>
               <span
                 className={`custom-transition relative z-[9] flex h-[38px] w-[38px] items-center justify-center rounded-[30px] border-none shadow-sm ${
-                  currentPath === item.path
-                    ? "bg-accentColor"
-                    : "bg-bgFirstColor"
+                  currentPath === item.path ? "bg-accentColor" : "bg-grayColor"
                 } group-hover:bg-hoverColor group-hover:shadow-md group-focus-visible:bg-hoverColor group-focus-visible:shadow-md md:h-[48px] md:w-[48px] md:text-[16px]`}
               >
                 {item.icon}
