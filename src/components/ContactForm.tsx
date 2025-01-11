@@ -32,9 +32,9 @@ export const ContactForm = () => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="flex w-full flex-col gap-5 md:gap-9"
+      className="flex w-full flex-col gap-7 md:gap-9 lg:gap-10"
     >
-      <div className="flex w-full flex-col gap-3 md:flex-row">
+      <div className="flex w-full flex-col gap-7 md:gap-9 lg:flex-row">
         <InputField
           tag="input"
           label="Your name"

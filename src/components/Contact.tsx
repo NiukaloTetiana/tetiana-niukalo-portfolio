@@ -13,7 +13,7 @@ export const Contact = () => {
           Get in <span className="text-accentColor">touch</span>
         </h2>
 
-        <div className="flex flex-col gap-5 md:flex-row md:gap-7">
+        <div className="flex flex-col gap-9 md:flex-row md:gap-7">
           <div>
             <h3 className="custom-transition mb-4 font-fontSecondary text-[26px] font-bold uppercase leading-[0.99] text-textColor md:text-[32px]">
               Don&#8217;t hesitate!
@@ -57,7 +57,7 @@ export const Contact = () => {
               </ul>
             </address>
 
-            <ul className="flex gap-[16px]">
+            <ul className="mt-auto flex gap-[16px]">
               {socialLinks.map((link, index) => (
                 <li
                   key={index}

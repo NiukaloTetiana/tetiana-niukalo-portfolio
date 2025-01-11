@@ -6,7 +6,7 @@ export default {
     screens: {
       "sm-max": { max: "374.99px" },
       md: "768px",
-      lg: "1440px",
+      lg: "1280px",
     },
     extend: {
       colors: {
@@ -52,9 +52,9 @@ export default {
             maxWidth: "768px",
           },
           "@screen lg": {
-            paddingLeft: "128px",
-            paddingRight: "128px",
-            maxWidth: "1440px",
+            paddingLeft: "100px",
+            paddingRight: "100px",
+            maxWidth: "1280px",
           },
         },
         ".link": {

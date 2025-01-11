@@ -26,7 +26,7 @@ export const InputField = <T extends "input" | "textarea">({
     <div className="relative w-full">
       <Tag
         id={name}
-        className={`peer custom-transition w-full border bg-transparent px-5 py-3 text-[14px] font-medium leading-[1.44] tracking-[-0.03em] text-textColor placeholder-transparent hover:border-accentColor focus-visible:border-accentColor md:py-[14px] md:text-[16px] ${Tag === "input" ? "h-[42px] rounded-full md:h-[48px] lg:h-[52px]" : "h-[150px] resize-none rounded-[30px] md:h-[190px]"} ${
+        className={`peer custom-transition w-full border bg-transparent px-5 py-3 text-[14px] font-medium leading-[1.44] tracking-[-0.03em] text-textColor placeholder-transparent hover:border-accentColor focus-visible:border-accentColor md:py-[14px] md:text-[16px] ${Tag === "input" ? "h-[42px] rounded-full md:h-[48px] lg:h-[52px]" : "h-[150px] resize-none rounded-[30px] align-top md:h-[190px]"} ${
           hasError
             ? "border-red-700 focus-visible:border-red-700 focus-visible:shadow-sm"
             : "border-secondTextColor focus-visible:border-accentColor focus-visible:shadow-sm"

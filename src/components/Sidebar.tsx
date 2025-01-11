@@ -42,8 +42,8 @@ export const Sidebar = () => {
   }, []);
 
   return (
-    <aside className="custom-transition fixed bottom-0 left-0 z-20 h-[62px] w-full rounded-t-[10px] bg-bgSecondColor pt-3 shadow-lg md:left-auto md:right-0 md:top-1/2 md:h-[325px] md:w-[84px] md:-translate-y-1/2 md:bg-transparent md:p-9 md:pl-0 md:shadow-none">
-      <ul className="flex justify-around md:flex-col md:justify-start md:gap-5">
+    <aside className="custom-transition fixed bottom-0 left-0 z-20 h-[62px] w-full rounded-t-[10px] bg-bgSecondColor pt-3 shadow-lg lg:left-auto lg:right-0 lg:top-1/2 lg:h-[325px] lg:w-[84px] lg:-translate-y-1/2 lg:bg-transparent lg:p-9 lg:pl-0 lg:shadow-none">
+      <ul className="mx-auto flex max-w-[375px] justify-around md:max-w-[768px] lg:flex-col lg:justify-start lg:gap-5">
         {navItems.map((item) => (
           <li key={item.path} className="group relative">
             <a href={item.path} onClick={() => setCurrentPath(item.path)}>

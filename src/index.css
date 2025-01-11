@@ -203,9 +203,9 @@ textarea:-webkit-autofill:focus {
 }
 
 .label {
-  @apply custom-transition absolute -top-5 left-4 transform bg-transparent text-[12px] uppercase text-secondTextColor peer-placeholder-shown:top-[15px] peer-placeholder-shown:text-gray-400 peer-focus:-top-2 peer-focus:text-[10px] peer-focus:text-accentColor md:text-[14px] md:peer-focus:text-[12px] lg:text-[16p];
+  @apply custom-transition absolute -top-4 left-4 transform bg-transparent text-[12px] uppercase text-secondTextColor peer-placeholder-shown:top-[13px] peer-placeholder-shown:text-gray-400 peer-focus:-top-2 peer-focus:text-[10px] peer-focus:text-accentColor md:-top-5 md:text-[14px] md:peer-placeholder-shown:top-[14px] md:peer-focus:text-[12px] lg:text-[16p];
 }
 
 .error {
-  @apply absolute -bottom-[18px] left-5 text-[8px] text-red-700 md:text-[12px];
+  @apply absolute -bottom-[12px] left-5 text-[8px] text-red-700 md:-bottom-[18px] md:text-[12px];
 }
