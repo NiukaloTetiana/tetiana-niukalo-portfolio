@@ -66,9 +66,9 @@
 /* Themes */
 
 html[data-theme="light"] {
-  --accent-color: #59c402;
+  --accent-color: #78d32e;
   --gray-color: #88b85bc7;
-  --hover-color: #4da903;
+  --hover-color: #51b201;
   --text-color: #2e2e36;
   --second-text-color: #c5e1a6;
   --border-color: #acb1a9;
@@ -194,7 +194,7 @@ textarea:-webkit-autofill:focus {
 }
 
 .address-label {
-  @apply text-grayColor custom-transition font-fontSecondary text-[18px] font-bold uppercase leading-[0.99] md:text-[20px];
+  @apply custom-transition font-fontSecondary text-[18px] font-bold uppercase leading-[0.99] text-grayColor md:text-[20px];
 }
 
 .address-text {
@@ -202,7 +202,7 @@ textarea:-webkit-autofill:focus {
 }
 
 .label {
-  @apply text-grayColor custom-transition absolute -top-[17px] left-5 transform bg-bgBodyColor text-[11px] uppercase peer-placeholder-shown:top-[13px] peer-placeholder-shown:text-borderColor peer-focus:-top-2 peer-focus:text-[10px] peer-focus:text-hoverColor md:-top-5 md:text-[13px] md:peer-placeholder-shown:top-[15px] md:peer-focus:text-[12px] lg:-top-[23px] lg:text-[15px] lg:peer-placeholder-shown:top-4;
+  @apply custom-transition absolute -top-[17px] left-6 transform bg-bgBodyColor text-[11px] uppercase text-borderColor peer-placeholder-shown:top-[13px] peer-placeholder-shown:text-borderColor peer-focus:-top-2 peer-focus:text-[10px] peer-focus:text-hoverColor md:-top-5 md:text-[13px] md:peer-placeholder-shown:top-[15px] md:peer-focus:text-[12px] lg:-top-[23px] lg:text-[15px] lg:peer-placeholder-shown:top-4;
 }
 
 .error {
@@ -239,4 +239,12 @@ textarea:-webkit-autofill:focus {
   .scrollbar {
     scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
   }
+}
+
+.button {
+  @apply address-label custom-transition relative flex h-[42px] w-[200px] items-center justify-between overflow-hidden rounded-full border-[1.3px] border-accentColor bg-transparent py-[14px] pl-6 text-start !text-textColor before:absolute before:inset-0 before:origin-right before:scale-x-0 before:bg-hoverColor before:transition-transform before:duration-500 hover:border-hoverColor hover:before:z-[-1] hover:before:scale-x-100 focus-visible:border-hoverColor md:h-[52px];
+}
+
+.button-span {
+  @apply custom-transition relative h-[42px] w-[42px] overflow-hidden rounded-full bg-accentColor shadow-sm group-hover:bg-hoverColor group-hover:shadow-md group-focus-visible:bg-hoverColor group-focus-visible:shadow-md md:h-[52px] md:w-[52px];
 }
