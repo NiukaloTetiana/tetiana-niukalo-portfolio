@@ -10,7 +10,7 @@ export const About = () => {
         </h2>
 
         <div className="md:flex md:gap-4 lg:gap-20">
-          <div className="mx-auto mb-5 flex size-[180px] shrink-0 items-center justify-center overflow-hidden rounded-full shadow-md md:mx-0 md:h-[480px] md:w-[320px] md:rounded-[30px] lg:h-[600px] lg:w-[420px]">
+          <div className="lg:w-[420px mx-auto mb-7 flex size-[180px] shrink-0 items-center justify-center overflow-hidden rounded-full shadow-md md:mx-0 md:mb-0 md:h-[480px] md:w-[320px] md:rounded-[30px] lg:h-[600px]">
             <img
               className="h-full w-full object-cover"
               src={photo}

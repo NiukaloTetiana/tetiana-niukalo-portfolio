@@ -81,10 +81,10 @@ html[data-theme="light"] {
 
 html[data-theme="dark"] {
   --accent-color: #72b63b;
-  --gray-color: #686871;
+  --gray-color: #516381;
   --hover-color: #5ba221;
   --text-color: #fafafa;
-  --second-text-color: #69696e;
+  --second-text-color: #516381b2;
   --border-color: #595d5d;
   --bg-first-color: #3f4c61;
   --bg-second-color: #0b131b9c;
