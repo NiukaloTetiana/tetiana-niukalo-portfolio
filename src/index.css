@@ -175,7 +175,16 @@ textarea:-webkit-autofill:focus {
 
 .title::before {
   content: attr(data-content);
-  @apply custom-transition absolute left-1/2 top-1/2 z-[-1] -translate-x-1/2 -translate-y-1/2 text-center font-fontPrimary text-[46px] font-bold uppercase text-secondTextColor md:text-[90px];
+  @apply custom-transition absolute left-1/2 top-1/2 z-[-1] -translate-x-1/2 -translate-y-1/2 text-center font-fontPrimary text-[46px] font-bold uppercase md:text-[90px];
+  background: linear-gradient(
+    90deg,
+    var(--hover-color),
+    var(--second-text-color),
+    var(--gray-color)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hover {
