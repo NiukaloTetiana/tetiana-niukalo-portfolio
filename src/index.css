@@ -67,7 +67,7 @@
 
 html[data-theme="light"] {
   --accent-color: #78d32e;
-  --gray-color: #88b85bc7;
+  --gray-color: #96ba74c7;
   --hover-color: #51b201;
   --text-color: #2e2e36;
   --second-text-color: #c5e1a6;
@@ -179,8 +179,8 @@ textarea:-webkit-autofill:focus {
   background: linear-gradient(
     90deg,
     var(--hover-color),
-    var(--second-text-color),
-    var(--gray-color)
+    var(--border-color),
+    var(--second-text-color)
   );
   background-clip: text;
   -webkit-background-clip: text;
