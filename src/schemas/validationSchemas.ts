@@ -17,6 +17,6 @@ export const contactSchema = yup.object({
   message: yup
     .string()
     .required("Message is required")
-    .min(3, "Min length must be more than 2 chars")
+    .min(2, "Min length must be more than 2 chars")
     .max(900, "Max length must be less than 900 chars"),
 });
