@@ -1,11 +1,10 @@
+import { FaCheck } from "react-icons/fa6";
 import { FaCogs, FaHandsHelping } from "react-icons/fa";
-import { BsTools } from "react-icons/bs";
-import { BsFolderSymlinkFill } from "react-icons/bs";
+import { BsTools, BsFolderSymlinkFill, BsGlobeAmericas } from "react-icons/bs";
 
 import photo from "../assets/images/photo.jpg";
 
-import { developmentSkills, qualities, tools } from "../constants";
-import { FaCheck } from "react-icons/fa6";
+import { developmentSkills, languages, qualities, tools } from "../constants";
 
 export const About = () => {
   return (
@@ -53,11 +52,9 @@ export const About = () => {
           </div>
         </div>
 
-        <h3 className="custom-transition mb-10 text-center font-fontSecondary text-[28px] uppercase leading-[1.1] text-textColor md:text-start md:text-[40px] lg:text-[54px]">
-          My skills
-        </h3>
+        <h3 className="subtitle">Skills</h3>
 
-        <div className="flex flex-col gap-10 md:flex-row md:flex-wrap md:gap-12">
+        <div className="mb-10 flex flex-col gap-10 md:mb-14 md:flex-row md:flex-wrap md:justify-center md:gap-12">
           <div>
             <h4 className="custom-transition mb-5 flex items-center gap-2 text-[20px] uppercase text-textColor md:mb-8 md:text-[24px]">
               <FaCogs className="size-10 text-accentColor" />
@@ -113,6 +110,21 @@ export const About = () => {
               ))}
             </ul>
           </div>
+        </div>
+
+        <div>
+          <h3 className="subtitle">Languages</h3>
+          <ul className="flex items-center justify-center gap-2 md:gap-4">
+            {languages.map((item) => (
+              <li
+                key={item}
+                className="hover custom-transition flex w-fit items-center justify-center gap-2 rounded-full bg-accentColor px-[12px] py-[10px] text-center text-[14px] text-textColor md:px-8 md:text-[16px]"
+              >
+                <BsGlobeAmericas className="custom-transition size-5 text-textColor sm-max:hidden" />
+                {item}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>

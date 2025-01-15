@@ -23,6 +23,6 @@ export const qualities = [
   "Communicative",
   "Conscientious",
   "Punctual",
-  "Cooperative",
+  "Adaptability",
   "Time Management",
 ];
