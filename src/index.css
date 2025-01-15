@@ -261,3 +261,7 @@ textarea:-webkit-autofill:focus {
 .button-span {
   @apply custom-transition relative h-[42px] w-[42px] overflow-hidden rounded-full bg-accentColor shadow-sm group-hover:bg-hoverColor group-hover:shadow-md group-focus-visible:bg-hoverColor group-focus-visible:shadow-md md:h-[52px] md:w-[52px];
 }
+
+.subtitle {
+  @apply custom-transition mb-10 text-center font-fontSecondary text-[28px] uppercase leading-[1.1] text-textColor md:text-[40px] lg:text-[54px];
+}
