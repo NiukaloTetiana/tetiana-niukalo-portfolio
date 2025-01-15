@@ -7,7 +7,7 @@ import { ContactForm } from "./ContactForm";
 
 export const Contact = () => {
   return (
-    <section id="contact" className="pb-20">
+    <section id="contact" className="pb-[90px] lg:pb-20">
       <div className="container">
         <h2 className="title" data-content="Contact">
           Get in <span className="text-accentColor">touch</span>
@@ -18,7 +18,7 @@ export const Contact = () => {
             <h3 className="custom-transition mb-4 font-fontSecondary text-[26px] font-bold uppercase leading-[0.99] text-textColor md:text-[32px]">
               Don&#8217;t hesitate!
             </h3>
-            <p className="custom-transition mb-6 w-[290px] text-[14px] font-semibold leading-[1.44] tracking-[-0.03em] text-textColor md:w-[350px] md:text-[16px]">
+            <p className="custom-transition mb-6 w-[290px] text-[14px] font-semibold leading-[1.44] tracking-[-0.03em] text-textColor md:w-[350px] md:text-[15px] lg:text-[16px]">
               Feel free to get in touch. I&#8217;m open to collaboration and new
               opportunities. Let&#8217;s create something amazing together.
             </p>
@@ -61,7 +61,7 @@ export const Contact = () => {
               {socialLinks.map((link, index) => (
                 <li
                   key={index}
-                  className="hover bg-grayColor custom-transition size-[36px] rounded-full border-none shadow-sm md:size-[46px]"
+                  className="hover custom-transition size-[36px] rounded-full border-none bg-grayColor shadow-sm md:size-[46px]"
                 >
                   <a
                     className="flex size-full items-center justify-center"

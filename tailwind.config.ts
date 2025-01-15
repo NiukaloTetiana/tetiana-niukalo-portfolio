@@ -46,8 +46,8 @@ export default {
           paddingLeft: "20px",
           paddingRight: "20px",
           "@screen md": {
-            paddingLeft: "36px",
-            paddingRight: "36px",
+            paddingLeft: "30px",
+            paddingRight: "30px",
             maxWidth: "768px",
           },
           "@screen lg": {

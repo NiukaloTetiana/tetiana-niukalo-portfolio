@@ -1,5 +1,11 @@
+import { FaCogs, FaHandsHelping } from "react-icons/fa";
+import { BsTools } from "react-icons/bs";
 import { BsFolderSymlinkFill } from "react-icons/bs";
+
 import photo from "../assets/images/photo.jpg";
+
+import { developmentSkills, qualities, tools } from "../constants";
+import { FaCheck } from "react-icons/fa6";
 
 export const About = () => {
   return (
@@ -9,8 +15,8 @@ export const About = () => {
           About <span className="text-accentColor">me</span>
         </h2>
 
-        <div className="md:flex md:gap-4 lg:gap-20">
-          <div className="lg:w-[420px mx-auto mb-7 flex size-[180px] shrink-0 items-center justify-center overflow-hidden rounded-full shadow-md md:mx-0 md:mb-0 md:h-[480px] md:w-[320px] md:rounded-[30px] lg:h-[600px]">
+        <div className="mb-5 md:flex md:gap-5 lg:gap-20">
+          <div className="mx-auto mb-7 flex size-[180px] shrink-0 items-center justify-center overflow-hidden rounded-full shadow-md md:mx-0 md:mb-0 md:size-[370px] lg:size-[500px]">
             <img
               className="h-full w-full object-cover"
               src={photo}
@@ -19,14 +25,14 @@ export const About = () => {
             />
           </div>
 
-          <div className="lg:pt-[180px]">
-            <h1 className="custom-transition relative mb-4 text-center font-fontSecondary text-[38px] uppercase leading-[1.1] text-accentColor before:hidden before:content-['&mdash;'] md:text-start md:text-[54px] lg:text-[70px] lg:before:absolute lg:before:left-[-55px] lg:before:top-0 lg:before:inline-block">
-              I&#8217;m Tetiana Niukalo.
+          <div className="lg:pt-[70px]">
+            <h1 className="custom-transition relative mb-4 text-center font-fontSecondary text-[38px] uppercase leading-[1.1] text-accentColor before:hidden before:content-['&mdash;'] md:text-start md:text-[54px] lg:text-[70px] lg:before:absolute lg:before:left-[-55px] lg:before:top-0 lg:before:inline-block lg:before:text-accentColor">
+              I&#8217;m Tetiana.
               <span className="block text-[28px] text-textColor md:text-[40px] lg:text-[54px]">
                 Fullstack Developer
               </span>
             </h1>
-            <p className="custom-transition mb-6 w-full text-center text-[15px] font-semibold leading-[1.5] tracking-[-0.03em] text-textColor md:w-[360px] md:text-start md:text-[16px] lg:w-[490px]">
+            <p className="custom-transition mb-6 w-full text-center text-[14px] font-semibold leading-[1.5] tracking-[-0.03em] text-textColor md:w-[320px] md:text-start md:text-[15px] lg:w-[490px] lg:text-[16px]">
               With a passion for continuous learning and growth, I am committed
               to taking on new challenges with enthusiasm. I take a responsible
               approach to time management and understand the importance of
@@ -44,6 +50,67 @@ export const About = () => {
                 <BsFolderSymlinkFill className="custom-transition z-10 size-4 fill-textColor md:size-5" />
               </span>
             </a>
+          </div>
+        </div>
+
+        <h3 className="custom-transition mb-10 font-fontSecondary text-[28px] uppercase leading-[1.1] text-textColor md:text-[40px] lg:text-[54px]">
+          My skills
+        </h3>
+
+        <div className="md:flex md:gap-4">
+          <div>
+            <h4 className="custom-transition mb-8 flex items-center gap-2 text-[20px] uppercase text-textColor md:text-[24px]">
+              <FaCogs className="size-10 text-accentColor" />
+              Development
+            </h4>
+            <ul className="flex max-w-[375px] flex-wrap md:max-w-[500px] lg:gap-5">
+              {developmentSkills.map((item) => (
+                <li
+                  key={item}
+                  className="hover custom-transition flex size-[100px] items-center justify-center rounded-full border border-borderColor bg-transparent text-[12px] text-textColor md:text-[14px]"
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="custom-transition mb-8 flex items-center gap-2 text-[20px] uppercase text-textColor md:text-[24px]">
+              <BsTools className="size-8 fill-accentColor" />
+              Tools
+            </h4>
+
+            <ul className="flex flex-col gap-4 pl-4">
+              {tools.map((item) => (
+                <li
+                  key={item}
+                  className="link custom-transition flex w-fit items-center gap-2 text-[14px] text-textColor md:text-[16px]"
+                >
+                  <FaCheck className="text-accentColor" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="custom-transition mb-8 flex items-center gap-2 text-[20px] uppercase text-textColor md:text-[24px]">
+              <FaHandsHelping className="size-8 fill-accentColor" /> Personal
+              Qualities
+            </h4>
+
+            <ul className="flex flex-col gap-4 pl-4">
+              {qualities.map((item) => (
+                <li
+                  key={item}
+                  className="link custom-transition flex w-fit items-center gap-2 text-[14px] text-textColor md:text-[16px]"
+                >
+                  <FaCheck className="text-accentColor" />
+                  {item}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>
