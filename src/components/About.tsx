@@ -57,7 +57,7 @@ export const About = () => {
         <div className="mb-10 flex flex-col gap-10 md:mb-14 md:flex-row md:flex-wrap md:justify-center md:gap-12">
           <div>
             <h4 className="custom-transition mb-5 flex items-center gap-2 text-[20px] uppercase text-textColor md:mb-8 md:text-[24px]">
-              <FaCogs className="size-10 text-accentColor" />
+              <FaCogs className="h-8 w-10 text-accentColor" />
               Development
             </h4>
 
@@ -94,7 +94,7 @@ export const About = () => {
 
           <div>
             <h4 className="custom-transition mb-5 flex items-center gap-2 text-[20px] uppercase text-textColor md:mb-8 md:text-[24px]">
-              <FaHandsHelping className="size-10 fill-accentColor" /> Personal
+              <FaHandsHelping className="h-8 w-10 fill-accentColor" /> Personal
               Qualities
             </h4>
 

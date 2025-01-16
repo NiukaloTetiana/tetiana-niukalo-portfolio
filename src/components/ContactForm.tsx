@@ -57,19 +57,20 @@ export const ContactForm = () => {
       )
       .then(() => {
         console.log("then");
-        toast.success("Message successfully sent!");
+        toast.success(
+          "Your message has been sent successfully! 🎉 I'll get back to you soon 😊"
+        );
         reset();
       })
       .catch(() => {
         console.log("catch");
-        toast.error("Error! Please try again.");
+        toast.error("Oops, server needs a coffee break ☕ Try again later 😞");
       })
       .finally(() => setIsLoading(false));
   };
 
   return (
     <>
-      {" "}
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="flex w-full flex-col gap-8 md:gap-10 lg:gap-11"
