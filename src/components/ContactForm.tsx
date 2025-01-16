@@ -26,9 +26,7 @@ export const ContactForm = () => {
   const serviceId = import.meta.env.VITE_SERVICE_ID;
   const templateId = import.meta.env.VITE_TEMPLATE_ID;
   const publicKey = import.meta.env.VITE_PUBLIC_KEY;
-  console.log(serviceId);
-  console.log(templateId);
-  console.log(publicKey);
+
   const {
     register,
     handleSubmit,

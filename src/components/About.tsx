@@ -15,7 +15,7 @@ export const About = () => {
         </h2>
 
         <div className="mb-10 md:flex md:gap-5 lg:gap-20">
-          <div className="mx-auto mb-7 flex size-[180px] shrink-0 items-center justify-center overflow-hidden rounded-full shadow-md md:mx-0 md:mb-0 md:size-[370px] lg:size-[500px]">
+          <div className="mx-auto mb-7 flex size-[220px] shrink-0 items-center justify-center overflow-hidden rounded-full shadow-md md:mx-0 md:mb-0 md:size-[370px] lg:size-[500px]">
             <img
               className="h-full w-full object-cover"
               src={photo}
@@ -25,13 +25,13 @@ export const About = () => {
           </div>
 
           <div className="lg:pt-[70px]">
-            <h1 className="custom-transition relative mb-4 text-center font-fontSecondary text-[38px] uppercase leading-[1.1] text-accentColor before:hidden before:content-['&mdash;'] md:text-start md:text-[54px] lg:text-[70px] lg:before:absolute lg:before:left-[-55px] lg:before:top-0 lg:before:inline-block lg:before:text-accentColor">
+            <h1 className="custom-transition relative mb-4 text-center font-fontSecondary text-[38px] uppercase leading-[1.1] text-accentColor before:hidden before:content-['\2014'] md:text-start md:text-[54px] lg:text-[70px] lg:before:absolute lg:before:left-[-55px] lg:before:top-0 lg:before:inline-block lg:before:text-accentColor">
               I&#8217;m Tetiana.
               <span className="block text-[28px] text-textColor md:text-[40px] lg:text-[54px]">
                 Fullstack Developer
               </span>
             </h1>
-            <p className="custom-transition mb-6 w-full text-center text-[14px] font-semibold leading-[1.5] tracking-[-0.03em] text-textColor md:w-[320px] md:text-start md:text-[15px] lg:w-[490px] lg:text-[16px]">
+            <p className="custom-transition mb-6 w-full text-center text-[14px] font-semibold leading-[1.5] tracking-[-0.03em] text-textColor md:w-[320px] md:text-start lg:w-[490px] lg:text-[16px]">
               With a passion for continuous learning and growth, I am committed
               to taking on new challenges with enthusiasm. I take a responsible
               approach to time management and understand the importance of
