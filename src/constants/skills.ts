@@ -11,13 +11,7 @@ export const developmentSkills = [
   "MongoDB",
 ];
 
-export const tools = [
-  "Git + Github",
-  "Browser DevTools",
-  "Postman",
-  "Firebase",
-  "Figma",
-];
+export const tools = ["Git + Github", "Postman", "Firebase", "Figma"];
 
 export const qualities = [
   "Communicative",
