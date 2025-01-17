@@ -1,7 +1,15 @@
 import AnimatedCursor from "react-animated-cursor";
 
 import { ThemeToggle } from "./ThemeToggle";
-import { About, Contact, Footer, ScrollUpButton, Sidebar } from "../components";
+import {
+  About,
+  Contact,
+  Experience,
+  Footer,
+  // Portfolio,
+  ScrollUpButton,
+  Sidebar,
+} from "../components";
 
 export const App = () => {
   return (
@@ -19,6 +27,8 @@ export const App = () => {
 
       <main>
         <About />
+        <Experience />
+        {/* <Portfolio /> */}
         <Contact />
         <ScrollUpButton />
       </main>

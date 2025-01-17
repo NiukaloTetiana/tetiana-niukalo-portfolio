@@ -35,8 +35,8 @@ export const About = () => {
               With a passion for continuous learning and growth, I am committed
               to taking on new challenges with enthusiasm. I take a responsible
               approach to time management and understand the importance of
-              deadlines. I approach challenges with curiosity and see every
-              experience as an opportunity for self-improvement.
+              deadlines. I&nbsp;approach&nbsp;challenges with curiosity and see
+              every experience as an opportunity for self-improvement.
             </p>
             <a
               href="https://drive.google.com/file/d/1rXDNQ1smYqRzwxFxOLD00MdNYlqd0ZPs/view?usp=drive_link"
@@ -54,14 +54,14 @@ export const About = () => {
 
         <h3 className="subtitle">Skills</h3>
 
-        <div className="mb-10 flex flex-col gap-10 md:mb-14 md:flex-row md:flex-wrap md:justify-center md:gap-12">
+        <div className="mb-10 flex flex-col gap-10 md:mb-14 md:flex-row md:flex-wrap md:justify-center md:gap-12 lg:gap-[62px]">
           <div>
             <h4 className="custom-transition mb-5 flex items-center gap-2 text-[20px] uppercase text-textColor md:mb-8 md:text-[24px]">
               <FaCogs className="h-8 w-10 text-accentColor" />
               Development
             </h4>
 
-            <ul className="flex flex-wrap gap-2 md:w-[600px] md:gap-4 lg:max-w-[490px]">
+            <ul className="flex flex-wrap gap-2 md:w-[600px] md:gap-4 lg:max-w-[510px]">
               {developmentSkills.map((item) => (
                 <li
                   key={item}

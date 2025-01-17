@@ -56,14 +56,12 @@ export const ContactForm = () => {
         publicKey
       )
       .then(() => {
-        console.log("then");
         toast.success(
           "Your message has been sent successfully! 🎉 I'll get back to you soon 😊"
         );
         reset();
       })
       .catch(() => {
-        console.log("catch");
         toast.error("Oops, server needs a coffee break ☕ Try again later 😞");
       })
       .finally(() => setIsLoading(false));

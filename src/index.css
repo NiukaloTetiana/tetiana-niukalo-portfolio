@@ -94,6 +94,14 @@ html[data-theme="dark"] {
 }
 
 /* --------------- */
+::selection {
+  @apply bg-hoverColor text-bgBodyColor;
+}
+
+::-moz-selection {
+  @apply bg-hoverColor text-bgBodyColor;
+}
+
 @layer base {
   * {
     @apply outline-none;
@@ -112,7 +120,6 @@ html {
 
 body {
   @apply custom-transition bg-bgBodyColor;
-  /* bg-gradient-to-r from-bgFirstColor to-bgSecondColor; */
 
   font-family: "Mona Sans", sans-serif;
   font-weight: 500;
@@ -159,18 +166,18 @@ img {
 
 input:-webkit-autofill,
 textarea:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0px 1000px #fbfbfb inset;
-  box-shadow: 0 0 0px 1000px #fbfbfb inset;
-  -webkit-text-fill-color: #2e2e36 !important;
+  -webkit-box-shadow: 0 0 0px 1000px var(--bg-body-color) inset;
+  box-shadow: 0 0 0px 1000px var(--bg-body-color) inset;
+  -webkit-text-fill-color: var(--text-color) !important;
 }
 
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 textarea:-webkit-autofill:hover,
 textarea:-webkit-autofill:focus {
-  -webkit-box-shadow: 0 0 0px 1000px #fbfbfb inset;
-  box-shadow: 0 0 0px 1000px #fbfbfb inset;
-  -webkit-text-fill-color: #2e2e36 !important;
+  -webkit-box-shadow: 0 0 0px 1000px var(--bg-body-color) inset;
+  box-shadow: 0 0 0px 1000px var(--bg-body-color) inset;
+  -webkit-text-fill-color: var(--text-color) !important;
 }
 
 .title {
