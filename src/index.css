@@ -81,7 +81,7 @@ html[data-theme="light"] {
 
 html[data-theme="dark"] {
   --accent-color: #72b63b;
-  --gray-color: #516381;
+  --gray-color: #677a9ec6;
   --hover-color: #5ba221;
   --text-color: #fafafa;
   --second-text-color: #4d5e79;
