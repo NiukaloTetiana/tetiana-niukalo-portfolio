@@ -18,7 +18,7 @@ export const Contact = () => {
             <h3 className="custom-transition mb-4 font-fontSecondary text-[26px] font-bold uppercase leading-[0.99] text-textColor md:text-[32px]">
               Don&#8217;t hesitate!
             </h3>
-            <p className="custom-transition mb-6 w-[290px] text-[14px] font-semibold leading-[1.44] tracking-[-0.03em] text-textColor md:w-[350px] md:text-[15px] lg:text-[16px]">
+            <p className="description mb-6 w-[290px] text-[14px] !leading-[1.44] md:w-[350px]">
               Feel free to get in touch. I&#8217;m open to collaboration and new
               opportunities. Let&#8217;s create something amazing together.
             </p>

@@ -84,7 +84,7 @@ html[data-theme="dark"] {
   --gray-color: #516381;
   --hover-color: #5ba221;
   --text-color: #fafafa;
-  --second-text-color: #516381b2;
+  --second-text-color: #4d5e79;
   --border-color: #595d5d;
   --bg-first-color: #3f4c61;
   --bg-second-color: #0b131b9c;
@@ -218,7 +218,7 @@ textarea:-webkit-autofill:focus {
 }
 
 .address-text {
-  @apply custom-transition text-[14px] font-medium leading-[1.44] tracking-[-0.03em] text-textColor md:text-[15px] lg:text-[16px];
+  @apply custom-transition text-[14px] font-medium leading-[1.2] tracking-[-0.03em] text-textColor md:text-[15px] lg:text-[16px];
 }
 
 .label {
@@ -271,4 +271,8 @@ textarea:-webkit-autofill:focus {
 
 .subtitle {
   @apply custom-transition mb-10 text-center font-fontSecondary text-[28px] uppercase leading-[1.1] text-textColor md:text-[40px] lg:text-[54px];
+}
+
+.description {
+  @apply custom-transition text-[14px] font-semibold leading-[1.2] tracking-[-0.03em] text-textColor md:text-[15px] lg:text-[16px];
 }
