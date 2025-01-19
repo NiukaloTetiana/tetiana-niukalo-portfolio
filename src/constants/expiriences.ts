@@ -28,6 +28,6 @@ export const experiences = [
     title: "Kyiv National University of Trade and Economics",
     description: "Bachelor's degree",
     text: "Accounting and audit",
-    year: "2014-2017",
+    year: "2014 - 2017",
   },
 ];

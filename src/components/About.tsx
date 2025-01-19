@@ -15,17 +15,15 @@ export const About = () => {
         </h2>
 
         <div className="mb-10 md:flex md:gap-5 lg:gap-20">
-          <div className="mx-auto mb-7 flex size-[220px] shrink-0 items-center justify-center overflow-hidden rounded-full shadow-md md:mx-0 md:mb-0 md:size-[370px] lg:size-[500px]">
-            <img
-              className="h-full w-full object-cover"
-              src={photo}
-              alt="Tetiana Niukalo photo"
-              loading="lazy"
-            />
-          </div>
+          <img
+            className="img mx-auto mb-7 size-[220px] md:mx-0 md:mb-0 md:size-[370px] lg:size-[500px]"
+            src={photo}
+            alt="Tetiana Niukalo photo"
+            loading="lazy"
+          />
 
           <div className="lg:pt-[70px]">
-            <h1 className="custom-transition relative mb-4 text-center font-fontSecondary text-[38px] uppercase leading-[1.1] text-accentColor before:hidden before:content-['\2014'] md:text-start md:text-[54px] lg:text-[70px] lg:before:absolute lg:before:left-[-55px] lg:before:top-0 lg:before:inline-block lg:before:text-accentColor">
+            <h1 className="custom-transition relative mb-4 text-center font-fontSecondary text-[38px] uppercase leading-[1.1] text-accentColor before:hidden before:content-['\2014'] md:text-start md:text-[54px] md:before:absolute md:before:left-[-40px] md:before:top-0 md:before:inline-block md:before:text-accentColor lg:text-[70px] lg:before:left-[-55px]">
               I&#8217;m Tetiana.
               <span className="block text-[28px] text-textColor md:text-[40px] lg:text-[54px]">
                 Fullstack Developer
