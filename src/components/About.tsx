@@ -2,7 +2,7 @@ import { FaCheck } from "react-icons/fa6";
 import { FaCogs, FaHandsHelping } from "react-icons/fa";
 import { BsTools, BsFolderSymlinkFill, BsGlobeAmericas } from "react-icons/bs";
 
-import photo from "../assets/images/photo.jpg";
+import photo from "../assets/images/myphoto.jpg";
 
 import { developmentSkills, languages, qualities, tools } from "../constants";
 
