@@ -14,8 +14,12 @@ export const Sidebar = () => {
         const section = document.querySelector(item.path) as HTMLElement;
         if (section) {
           const sectionTop = section.offsetTop;
+          const viewportCenter = scrollPosition + window.innerHeight / 2;
 
-          if (scrollPosition >= sectionTop / 2) {
+          if (
+            viewportCenter >= sectionTop &&
+            viewportCenter < sectionTop + section.offsetHeight
+          ) {
             setCurrentPath(item.path);
           }
         }
