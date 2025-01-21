@@ -6,7 +6,7 @@ import {
   Contact,
   Experience,
   Footer,
-  // Portfolio,
+  Portfolio,
   ScrollUpButton,
   Sidebar,
 } from "../components";
@@ -25,10 +25,10 @@ export const App = () => {
       />
       <Sidebar />
 
-      <main>
+      <main className="overflow-hidden">
         <About />
         <Experience />
-        {/* <Portfolio /> */}
+        <Portfolio />
         <Contact />
         <ScrollUpButton />
       </main>
