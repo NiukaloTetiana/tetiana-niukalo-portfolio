@@ -1,5 +1,5 @@
-import { FaExternalLinkSquareAlt } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa6";
+import { FaExternalLinkSquareAlt } from "react-icons/fa";
 
 import { portfolioItems } from "../constants";
 
@@ -20,21 +20,27 @@ export const Portfolio = () => {
               <div className="custom-transition relative overflow-hidden rounded-t-[30px] border-[1.3px] border-borderColor">
                 <img
                   src={item.image}
-                  alt={item.altText}
-                  className="h-auto w-full"
+                  alt={`${item.title} home page`}
+                  className="h-auto w-full transition duration-500 group-hover:scale-110"
                 />
-                <p className="custom-transition absolute inset-0 flex translate-y-full items-center justify-center bg-black bg-opacity-50 p-4 text-center text-white group-hover:translate-y-0 group-focus-visible:translate-y-0">
-                  {item.description}
-                </p>
+                <div className="custom-transition absolute inset-0 flex translate-y-full flex-col justify-center bg-black bg-opacity-60 p-5 text-[14px] text-white group-hover:translate-y-0 group-focus-visible:translate-y-0">
+                  <p>{item.description}</p>
+                  <p className="mt-auto">Role: {item.role}</p>
+                </div>
               </div>
               <div className="custom-transition flex justify-between rounded-b-[30px] border-x-[1.3px] border-b-[1.3px] border-borderColor p-4 md:p-5">
                 <div>
                   <h2 className="address-label custom-transition mb-3 !text-textColor">
                     {item.title}
                   </h2>
-                  <p className="custom-transition text-sm text-borderColor">
-                    {item.category}
-                  </p>
+
+                  <div className="flex space-x-2">
+                    {item.technologies.map((tech, index) => (
+                      <div key={index} title={tech.name}>
+                        {tech.icon}
+                      </div>
+                    ))}
+                  </div>
                 </div>
 
                 <ul className="flex gap-2">
