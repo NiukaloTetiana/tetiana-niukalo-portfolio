@@ -49,7 +49,7 @@ export const Sidebar = () => {
   }, []);
 
   return (
-    <aside className="custom-transition fixed bottom-0 left-0 z-20 w-full rounded-t-[10px] bg-bgSecondColor py-3 shadow-lg md:py-5 lg:left-auto lg:right-0 lg:top-1/2 lg:h-[325px] lg:w-[84px] lg:-translate-y-1/2 lg:bg-transparent lg:p-9 lg:pl-0 lg:shadow-none">
+    <aside className="custom-transition fixed bottom-0 left-0 z-20 w-full rounded-t-[10px] bg-bgSecondColor py-5 shadow-lg lg:left-auto lg:right-0 lg:top-1/2 lg:h-[325px] lg:w-[84px] lg:-translate-y-1/2 lg:bg-transparent lg:p-9 lg:pl-0 lg:shadow-none">
       <motion.ul
         className="mx-auto flex max-w-[375px] justify-around md:max-w-[768px] lg:flex-col lg:justify-start lg:gap-5"
         initial={{ ...(isDesktop ? { y: -300 } : { height: 0 }), opacity: 0 }}

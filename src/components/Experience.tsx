@@ -57,7 +57,7 @@ export const Experience = () => {
                 whileInView="show"
                 viewport={{ once: true, amount: 0.5 }}
               >
-                <div className="custom-transition absolute -left-[45px] -ml-5 flex size-[38px] items-center justify-center rounded-full bg-secondTextColor shadow-sm group-hover:bg-hoverColor group-focus-visible:bg-hoverColor sm-max:-left-[39px] md:left-1/2 md:-ml-6 md:size-[48px]">
+                <div className="custom-transition absolute -left-[45px] -ml-5 flex size-[38px] items-center justify-center rounded-full bg-secondTextColor shadow-sm group-hover:bg-accentColor group-hover:shadow-md group-focus-visible:bg-accentColor group-focus-visible:shadow-md sm-max:-left-[39px] md:left-1/2 md:-ml-6 md:size-[48px]">
                   {item.type === "education" ? (
                     <FaGraduationCap className="size-[14px] fill-textColor md:size-[18px]" />
                   ) : (
@@ -70,7 +70,7 @@ export const Experience = () => {
                     isLeft ? "md:after:-right-2 md:after:left-auto" : ""
                   }`}
                 >
-                  <h5 className="address-label mb-3 !text-hoverColor">
+                  <h5 className="address-label mb-3 !text-hoverColor group-hover:!text-accentColor group-focus-visible:!text-accentColor">
                     {item.title}
                   </h5>
                   <p className="description">{item.description}</p>

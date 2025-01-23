@@ -7,7 +7,7 @@ import { ContactForm } from "./ContactForm";
 
 export const Contact = () => {
   return (
-    <section id="contact" className="pb-[90px] lg:pb-20">
+    <section id="contact" className="pb-[100px] lg:pb-20">
       <div className="container">
         <h2 className="title" data-content="Contact">
           Get in <span className="text-accentColor">touch</span>

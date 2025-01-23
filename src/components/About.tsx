@@ -9,7 +9,7 @@ import photo from "../assets/images/myphoto.jpg";
 import { developmentSkills, languages, qualities, tools } from "../constants";
 
 export const About = () => {
-  const isMobile = useMediaQuery({ query: "(max-width:767.98)" });
+  const isMobile = useMediaQuery({ query: "(max-width:767.98px)" });
 
   return (
     <section id="about">

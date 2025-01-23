@@ -66,9 +66,9 @@
 /* Themes */
 
 html[data-theme="light"] {
-  --accent-color: #55bd00;
+  --accent-color: #499f02;
   --gray-color: #96ba74c7;
-  --hover-color: #51b201;
+  --hover-color: #55bc00;
   --text-color: #2e2e36;
   --second-text-color: #c5e1a6;
   --border-color: #96be7e;
@@ -186,7 +186,7 @@ textarea:-webkit-autofill:focus {
 
 .title::before {
   content: attr(data-content);
-  @apply custom-transition absolute left-1/2 top-1/2 z-[-1] -translate-x-1/2 -translate-y-1/2 text-center font-fontPrimary text-[46px] font-bold uppercase md:text-[90px];
+  @apply custom-transition absolute left-1/2 top-1/2 z-[-1] -translate-x-1/2 -translate-y-1/2 text-center font-fontPrimary text-[46px] font-bold uppercase opacity-60 md:text-[90px];
   background: linear-gradient(
     90deg,
     var(--hover-color),
