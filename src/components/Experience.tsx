@@ -1,9 +1,12 @@
-import { FaGraduationCap, FaBriefcase } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { useMediaQuery } from "react-responsive";
+import { FaGraduationCap, FaBriefcase } from "react-icons/fa";
 
 import { experiences } from "../constants";
 
 export const Experience = () => {
+  const isMobile = useMediaQuery({ query: "(max-width:767.98px)" });
+
   const listVariants = {
     hidden: { opacity: 0 },
     show: {
@@ -17,7 +20,7 @@ export const Experience = () => {
   const itemsVariants = {
     hidden: (isLeft: boolean) => ({
       opacity: 0,
-      x: isLeft ? -100 : 100,
+      x: isLeft && !isMobile ? -100 : 100,
     }),
     show: {
       opacity: 1,

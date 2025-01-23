@@ -1,28 +1,52 @@
 import { FaCheck } from "react-icons/fa6";
 import { FaCogs, FaHandsHelping } from "react-icons/fa";
 import { BsTools, BsFolderSymlinkFill, BsGlobeAmericas } from "react-icons/bs";
+import { useMediaQuery } from "react-responsive";
+import { motion } from "framer-motion";
 
 import photo from "../assets/images/myphoto.jpg";
 
 import { developmentSkills, languages, qualities, tools } from "../constants";
 
 export const About = () => {
+  const isMobile = useMediaQuery({ query: "(max-width:767.98)" });
+
   return (
     <section id="about">
-      <div className="container">
+      <motion.div
+        className="container"
+        initial={{ y: 50, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        whileInView="show"
+        viewport={{ once: true, amount: 0.5 }}
+      >
         <h2 className="title" data-content="Resume">
           About <span className="text-accentColor">me</span>
         </h2>
 
         <div className="mb-10 md:flex md:gap-5 lg:gap-20">
-          <img
+          <motion.img
             className="img mx-auto mb-7 size-[220px] md:mx-0 md:mb-0 md:size-[370px] lg:size-[500px]"
             src={photo}
+            width={300}
+            height={300}
             alt="Tetiana Niukalo photo"
-            loading="lazy"
+            initial={{ scale: 0, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            whileInView="show"
+            viewport={{ once: true, amount: 0.5 }}
           />
 
-          <div className="lg:pt-[70px]">
+          <motion.div
+            className="lg:pt-[70px]"
+            initial={{ ...(isMobile ? { y: 100 } : { x: 100 }), opacity: 0 }}
+            animate={{ ...(isMobile ? { y: 0 } : { x: 0 }), opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            whileInView="show"
+            viewport={{ once: true, amount: 0.5 }}
+          >
             <h1 className="custom-transition relative mb-4 text-center font-fontSecondary text-[38px] uppercase leading-[1.1] text-accentColor before:hidden before:content-['\2014'] md:text-start md:text-[54px] md:before:absolute md:before:left-[-40px] md:before:top-0 md:before:inline-block md:before:text-accentColor lg:text-[70px] lg:before:left-[-55px]">
               I&#8217;m Tetiana.
               <span className="block text-[28px] text-textColor md:text-[40px] lg:text-[54px]">
@@ -47,7 +71,7 @@ export const About = () => {
                 <BsFolderSymlinkFill className="custom-transition z-10 size-4 fill-textColor md:size-5" />
               </span>
             </a>
-          </div>
+          </motion.div>
         </div>
 
         <h3 className="subtitle">Skills</h3>
@@ -124,7 +148,7 @@ export const About = () => {
             ))}
           </ul>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
