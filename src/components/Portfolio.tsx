@@ -1,9 +1,25 @@
+import { motion } from "framer-motion";
 import { FaGithub } from "react-icons/fa6";
 import { FaExternalLinkSquareAlt } from "react-icons/fa";
+import { useMediaQuery } from "react-responsive";
 
 import { portfolioItems } from "../constants";
 
 export const Portfolio = () => {
+  const isMobile = useMediaQuery({ query: "(max-width:767.98px)" });
+  const itemVariants = {
+    hidden: { opacity: 0, ...(isMobile ? { y: 100 } : { x: 100 }) },
+    show: (i: number) => ({
+      opacity: 1,
+      ...(isMobile ? { y: 0 } : { x: 0 }),
+      transition: {
+        duration: 0.8,
+        delay: i * 0.25,
+        ease: "easeIn",
+      },
+    }),
+  };
+
   return (
     <section id="portfolio">
       <div className="container">
@@ -11,11 +27,16 @@ export const Portfolio = () => {
           My <span className="text-accentColor">portfolio</span>
         </h2>
 
-        <ul className="flex flex-wrap gap-x-6 gap-y-12">
+        <ul className="grid grid-cols-1 gap-x-4 gap-y-6 md:grid-cols-2 lg:grid-cols-3">
           {portfolioItems.map((item, index) => (
-            <li
+            <motion.li
               key={index}
-              className="sm:w-[calc(50%-12px)] group custom-transition w-full rounded-[30px] hover:shadow-md md:w-[calc(33.333%-16px)]"
+              className="group custom-transition w-full rounded-[30px] hover:shadow-md focus-visible:shadow-md"
+              variants={itemVariants}
+              initial="hidden"
+              whileInView="show"
+              custom={index % 3}
+              viewport={{ once: true, amount: 0.3 }}
             >
               <div className="custom-transition relative overflow-hidden rounded-t-[30px] border-[1.3px] border-borderColor">
                 <img
@@ -24,7 +45,7 @@ export const Portfolio = () => {
                   width="342"
                   height="220"
                   loading="lazy"
-                  className="h-[220px] w-full shrink-0 transition duration-500 group-hover:scale-110"
+                  className="h-[220px] w-full object-cover object-top transition duration-500 group-hover:scale-110"
                 />
 
                 <div className="custom-transition absolute inset-0 flex translate-y-full flex-col justify-center bg-black bg-opacity-70 p-5 text-[14px] text-white group-hover:translate-y-0 group-focus-visible:translate-y-0">
@@ -80,7 +101,7 @@ export const Portfolio = () => {
                   ))}
                 </div>
               </div>
-            </li>
+            </motion.li>
           ))}
         </ul>
       </div>

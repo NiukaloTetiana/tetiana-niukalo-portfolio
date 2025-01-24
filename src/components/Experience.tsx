@@ -7,16 +7,6 @@ import { experiences } from "../constants";
 export const Experience = () => {
   const isMobile = useMediaQuery({ query: "(max-width:767.98px)" });
 
-  const listVariants = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.35,
-      },
-    },
-  };
-
   const itemsVariants = {
     hidden: (isLeft: boolean) => ({
       opacity: 0,
@@ -39,10 +29,7 @@ export const Experience = () => {
           My <span className="text-accentColor">path</span>
         </h2>
 
-        <motion.ul
-          className="custom-transition relative flex flex-col items-end after:absolute after:left-5 after:z-[-1] after:h-full after:w-[2px] after:-translate-x-1/2 after:transform after:bg-accentColor md:items-center md:after:left-1/2"
-          variants={listVariants}
-        >
+        <ul className="custom-transition relative flex flex-col items-end after:absolute after:left-5 after:z-[-1] after:h-full after:w-[2px] after:-translate-x-1/2 after:transform after:bg-accentColor md:items-center md:after:left-1/2">
           {experiences.map((item, index) => {
             const isLeft = index % 2 === 0;
             return (
@@ -91,7 +78,7 @@ export const Experience = () => {
               </motion.li>
             );
           })}
-        </motion.ul>
+        </ul>
       </div>
     </section>
   );

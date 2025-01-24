@@ -1,7 +1,5 @@
-import { BsTrello } from "react-icons/bs";
 import { GiCardboardBox } from "react-icons/gi";
-import { SiStyledcomponents } from "react-icons/si";
-import { BsFiletypeScss, BsGit } from "react-icons/bs";
+import { BsFiletypeScss, BsGit, BsTrello } from "react-icons/bs";
 import {
   FaReact,
   FaJsSquare,
@@ -17,6 +15,7 @@ import {
   SiWebpack,
   SiFirebase,
   SiAxios,
+  SiStyledcomponents,
 } from "react-icons/si";
 
 import pets from "../assets/images/portfolio/pets.webp";
