@@ -11,6 +11,15 @@ import { developmentSkills, languages, qualities, tools } from "../constants";
 export const About = () => {
   const isMobile = useMediaQuery({ query: "(max-width:767.98px)" });
 
+  const flipVariants = {
+    hidden: { rotateY: 90, opacity: 0 },
+    visible: {
+      rotateY: 0,
+      opacity: 1,
+      transition: { duration: 0.5 },
+    },
+  };
+
   return (
     <section id="about">
       <motion.div
@@ -85,12 +94,16 @@ export const About = () => {
 
             <ul className="flex flex-wrap gap-2 md:w-[600px] md:gap-4 lg:max-w-[510px]">
               {developmentSkills.map((item) => (
-                <li
+                <motion.li
                   key={item}
                   className="hover custom-transition flex size-[85px] items-center justify-center rounded-full border border-borderColor bg-transparent text-[12px] text-textColor md:size-[100px] md:text-[14px]"
+                  variants={flipVariants}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.3 }}
                 >
                   {item}
-                </li>
+                </motion.li>
               ))}
             </ul>
           </div>
@@ -103,13 +116,17 @@ export const About = () => {
 
             <ul className="flex flex-col gap-4 pl-4">
               {tools.map((item) => (
-                <li
+                <motion.li
                   key={item}
                   className="link custom-transition flex w-fit items-center gap-2 text-[14px] text-textColor md:text-[16px]"
+                  variants={flipVariants}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.3 }}
                 >
                   <FaCheck className="text-accentColor" />
                   {item}
-                </li>
+                </motion.li>
               ))}
             </ul>
           </div>
@@ -122,13 +139,17 @@ export const About = () => {
 
             <ul className="flex flex-col gap-4 pl-4">
               {qualities.map((item) => (
-                <li
+                <motion.li
                   key={item}
                   className="link custom-transition flex w-fit items-center gap-2 text-[14px] text-textColor md:text-[16px]"
+                  variants={flipVariants}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.3 }}
                 >
                   <FaCheck className="text-accentColor" />
                   {item}
-                </li>
+                </motion.li>
               ))}
             </ul>
           </div>
