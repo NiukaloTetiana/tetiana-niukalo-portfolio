@@ -5,3 +5,4 @@ export * from "./skills";
 export * from "./languages";
 export * from "./expiriences";
 export * from "./portfolioItem";
+export * from "./animations";
