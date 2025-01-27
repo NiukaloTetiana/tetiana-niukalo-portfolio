@@ -53,9 +53,8 @@ export const Sidebar = () => {
       <motion.ul
         className="mx-auto flex max-w-[375px] justify-around md:max-w-[768px] lg:flex-col lg:justify-start lg:gap-5"
         initial={{ ...(isDesktop ? { y: -300 } : { scale: 0 }), opacity: 0 }}
-        animate={{ ...(isDesktop ? { y: 0 } : { scale: 1 }), opacity: 1 }}
+        whileInView={{ ...(isDesktop ? { y: 0 } : { scale: 1 }), opacity: 1 }}
         transition={{ duration: 0.8 }}
-        whileInView="show"
         viewport={{ once: true, amount: 0.5 }}
       >
         {navItems.map((item) => (

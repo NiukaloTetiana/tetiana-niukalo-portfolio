@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useMediaQuery } from "react-responsive";
 import { FaGraduationCap, FaBriefcase } from "react-icons/fa";
 
-import { experiences } from "../constants";
+import { experiences, fadeInUp } from "../constants";
 
 export const Experience = () => {
   const isMobile = useMediaQuery({ query: "(max-width:767.98px)" });
@@ -24,7 +24,7 @@ export const Experience = () => {
 
   return (
     <section id="experience">
-      <div className="container">
+      <motion.div className="container" {...fadeInUp}>
         <h2 className="title" data-content="Experience">
           My <span className="text-accentColor">path</span>
         </h2>
@@ -79,7 +79,7 @@ export const Experience = () => {
             );
           })}
         </ul>
-      </div>
+      </motion.div>
     </section>
   );
 };

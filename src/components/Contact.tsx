@@ -1,20 +1,32 @@
+import { motion } from "framer-motion";
 import { BsPhoneVibrateFill } from "react-icons/bs";
 import { FaMapLocationDot } from "react-icons/fa6";
 import { IoIosMailOpen } from "react-icons/io";
+import { useMediaQuery } from "react-responsive";
 
-import { socialLinks } from "../constants";
-import { ContactForm } from "./ContactForm";
+import { fadeInUp, socialLinks } from "../constants";
+import { ContactForm } from "../components";
 
 export const Contact = () => {
+  const isMobile = useMediaQuery({ query: "(max-width:767.98px)" });
+
   return (
     <section id="contact" className="pb-[110px] lg:pb-20">
-      <div className="container">
+      <motion.div className="container" {...fadeInUp}>
         <h2 className="title" data-content="Contact">
           Get in <span className="text-accentColor">touch</span>
         </h2>
 
         <div className="flex flex-col gap-9 md:flex-row md:gap-7">
-          <div>
+          <motion.div
+            initial={{ ...(isMobile ? { y: 100 } : { x: -100 }), opacity: 0 }}
+            whileInView={{
+              ...(isMobile ? { y: 0 } : { x: 0 }),
+              opacity: 1,
+            }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            viewport={{ once: true, amount: 0.5 }}
+          >
             <h3 className="custom-transition mb-4 font-fontSecondary text-[26px] font-bold uppercase leading-[0.99] text-textColor md:text-[32px]">
               Don&#8217;t hesitate!
             </h3>
@@ -75,11 +87,11 @@ export const Contact = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </motion.div>
 
           <ContactForm />
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

@@ -1,8 +1,8 @@
+import { motion } from "framer-motion";
+import { useMediaQuery } from "react-responsive";
 import { FaCheck } from "react-icons/fa6";
 import { FaCogs, FaHandsHelping } from "react-icons/fa";
 import { BsTools, BsFolderSymlinkFill, BsGlobeAmericas } from "react-icons/bs";
-import { useMediaQuery } from "react-responsive";
-import { motion } from "framer-motion";
 
 import photo from "../assets/images/myphoto.jpg";
 
@@ -87,11 +87,11 @@ export const About = () => {
                 Development
               </h4>
 
-              <ul className="flex flex-wrap gap-2 md:w-[600px] md:gap-4 lg:max-w-[510px]">
+              <ul className="flex flex-wrap gap-4 md:w-[600px] md:gap-6 lg:max-w-[510px]">
                 {developmentSkills.map((item) => (
                   <motion.li
                     key={item}
-                    className="hover custom-transition flex size-[85px] items-center justify-center rounded-full border border-borderColor bg-transparent text-[12px] text-textColor md:size-[100px] md:text-[14px]"
+                    className="hover custom-transition flex size-[100px] items-center justify-center rounded-full border border-borderColor bg-transparent text-[14px] text-textColor lg:size-[108px] lg:text-[15px]"
                     variants={flip180Variants}
                     initial="hidden"
                     whileInView="visible"

@@ -3,7 +3,7 @@ import { FaGithub } from "react-icons/fa6";
 import { FaExternalLinkSquareAlt } from "react-icons/fa";
 import { useMediaQuery } from "react-responsive";
 
-import { portfolioItems } from "../constants";
+import { fadeInUp, portfolioItems } from "../constants";
 
 export const Portfolio = () => {
   const isMobile = useMediaQuery({ query: "(max-width:767.98px)" });
@@ -14,7 +14,7 @@ export const Portfolio = () => {
       ...(isMobile ? { y: 0 } : { x: 0 }),
       transition: {
         duration: 0.8,
-        delay: i * 0.25,
+        delay: i * 0.35,
         ease: "easeIn",
       },
     }),
@@ -22,8 +22,12 @@ export const Portfolio = () => {
 
   return (
     <section id="portfolio">
-      <div className="container">
-        <h2 className="title" data-content="Works">
+      <motion.div
+        className="container"
+        {...fadeInUp}
+        viewport={{ amount: 0.2, once: true }}
+      >
+        <h2 className="title" data-content="Projects">
           My <span className="text-accentColor">portfolio</span>
         </h2>
 
@@ -104,7 +108,7 @@ export const Portfolio = () => {
             </motion.li>
           ))}
         </ul>
-      </div>
+      </motion.div>
     </section>
   );
 };

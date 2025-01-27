@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { motion } from "framer-motion";
 import { MdOutlineArrowOutward } from "react-icons/md";
 import {
   useForm,
@@ -5,14 +7,13 @@ import {
   FieldValues,
   UseFormRegister,
 } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
 import emailjs from "@emailjs/browser";
-
-import { InputField } from "./InputField";
-import { contactSchema } from "../schemas";
-import { useState } from "react";
-import { Loader } from "./Loader";
 import { toast } from "react-toastify";
+import { useMediaQuery } from "react-responsive";
+import { yupResolver } from "@hookform/resolvers/yup";
+
+import { InputField, Loader } from "../components";
+import { contactSchema } from "../schemas";
 
 interface ContactFormValues {
   name: string;
@@ -22,6 +23,7 @@ interface ContactFormValues {
 
 export const ContactForm = () => {
   const [isLoading, setIsLoading] = useState(false);
+  const isMobile = useMediaQuery({ query: "(max-width:767.98px)" });
 
   const serviceId = import.meta.env.VITE_SERVICE_ID;
   const templateId = import.meta.env.VITE_TEMPLATE_ID;
@@ -69,9 +71,16 @@ export const ContactForm = () => {
 
   return (
     <>
-      <form
+      <motion.form
         onSubmit={handleSubmit(onSubmit)}
         className="flex w-full flex-col gap-8 md:gap-10 lg:gap-11"
+        initial={{ ...(isMobile ? { y: 100 } : { x: 100 }), opacity: 0 }}
+        whileInView={{
+          ...(isMobile ? { y: 0 } : { x: 0 }),
+          opacity: 1,
+        }}
+        transition={{ duration: 0.8, delay: 0.5 }}
+        viewport={{ once: true, amount: 0.5 }}
       >
         <div className="flex w-full flex-col gap-7 md:gap-10 lg:flex-row">
           <InputField
@@ -112,7 +121,7 @@ export const ContactForm = () => {
             <MdOutlineArrowOutward className="custom-transition absolute left-0 top-full size-5 -translate-x-1/2 -translate-y-1/2 fill-textColor group-hover:-translate-y-8 group-hover:translate-x-3 md:size-[22px] md:group-hover:-translate-y-9 md:group-hover:translate-x-4" />
           </span>
         </button>
-      </form>
+      </motion.form>
       {isLoading && <Loader />}
     </>
   );
