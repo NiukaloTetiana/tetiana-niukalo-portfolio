@@ -3,6 +3,7 @@ export * from "./social";
 export * from "./emailRegExp";
 export * from "./skills";
 export * from "./languages";
-export * from "./expiriences";
+export * from "./experiences";
 export * from "./portfolioItem";
 export * from "./animations";
+export * from "./buttonItem";
