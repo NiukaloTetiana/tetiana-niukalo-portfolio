@@ -141,6 +141,10 @@ address {
   @apply not-italic;
 }
 
+button {
+  @apply outline-none;
+}
+
 a:hover,
 a:focus-visible {
   @apply text-accentColor;

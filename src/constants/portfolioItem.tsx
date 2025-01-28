@@ -31,6 +31,7 @@ import house from "../assets/images/portfolio/house.jpg";
 export const portfolioItems = [
   {
     title: "Ukrainian House",
+    category: "React",
     answerable: `sections "Header" and "Footer", ContactsPage, Site developers part.`,
     image: house,
     description:
@@ -56,6 +57,7 @@ export const portfolioItems = [
 
   {
     title: "HYPE TATTOO",
+    category: "JavaScript",
     answerable: "Individual project.",
     image: tattoo,
     description: ` "HYPE TATTOO" is a responsive landing page for a tattoo studio, featuring a modern design and user-friendly experience. It includes two additional pages: a "Not Found" (404) page for unavailable resources and a "Thank You" page after completing an action. `,
@@ -79,6 +81,7 @@ export const portfolioItems = [
   },
   {
     title: "E-Pharmacy",
+    category: "React + Node.js",
     answerable: "Individual project.",
     image: pharmacy,
     description: ` "E-Pharmacy" is a accessible web application is aimed at helping users easily search for, compare, and purchase medicines from pharmacies nearby. User authentication, dynamic search a smooth experience for users to locate and order essential medicines at their convenience.`,
@@ -107,6 +110,7 @@ export const portfolioItems = [
 
   {
     title: "pet Love",
+    category: "React",
     answerable: "Individual project.",
     image: pets,
     description: ` "petLove" is a streamlined web application designed for pet owners and animal lovers, providing a convenient platform to post pet listings, find up-to-date information, connect with project partners, and enable user interaction.`,
@@ -134,6 +138,7 @@ export const portfolioItems = [
 
   {
     title: "Nanny.Services",
+    category: "React",
     answerable: "Individual project.",
     image: nanny,
     description: ` "Nanny.Services" is a web application designed to connect users with available nannies. It allows users to browse through a list of nannies, filter them based on various criteria, and registered users can add or remove their favorite nannies.`,
@@ -162,6 +167,7 @@ export const portfolioItems = [
 
   {
     title: "Event-View",
+    category: "React + Node.js",
     answerable: "Individual project.",
     image: events,
     description: ` "Event-View" is a dynamic and user-friendly application helps users discover, register for, and manage events. It features user authentication, responsive design and interactive tools, making finding and joining events of interest easy.`,
@@ -189,28 +195,8 @@ export const portfolioItems = [
   },
 
   {
-    title: "ExpenseTracker",
-    answerable: "RegisterPage, LoginPage, WelcomePage.",
-    image: expensetracker,
-    description:
-      "This project is a finance tracking application. Key features include expense and income tracking, intuitive organization, a user-friendly interface, and instant access to financial insights.",
-    role: "Developer and Scrum Master.",
-    githubLink: "https://github.com/DimkaGrek/ReactAvengers",
-    websiteLink: "https://dimkagrek.github.io/ReactAvengers/",
-    technologies: [
-      { name: "HTML5", icon: <FaHtml5 className="text-orange-500" /> },
-      { name: "CSS3", icon: <FaCss3Alt className="text-blue-700" /> },
-      { name: "JavaScript", icon: <FaJsSquare className="text-yellow-500" /> },
-      { name: "React", icon: <FaReact className="text-blue-500" /> },
-      { name: "Axios", icon: <SiAxios className="text-blue-800" /> },
-      { name: "Webpack", icon: <SiWebpack className="text-blue-400" /> },
-      { name: "Git", icon: <BsGit className="text-gray-400" /> },
-      { name: "Trello", icon: <BsTrello className="text-cyan-600" /> },
-    ],
-  },
-
-  {
     title: "Task Pro",
+    category: "React + Node.js",
     answerable:
       "- Front: SideBar, NeedHelpForm. - Back: Issues controllers, services, routes.",
     image: task,
@@ -239,7 +225,30 @@ export const portfolioItems = [
   },
 
   {
+    title: "ExpenseTracker",
+    category: "React",
+    answerable: "RegisterPage, LoginPage, WelcomePage.",
+    image: expensetracker,
+    description:
+      "This project is a finance tracking application. Key features include expense and income tracking, intuitive organization, a user-friendly interface, and instant access to financial insights.",
+    role: "Developer and Scrum Master.",
+    githubLink: "https://github.com/DimkaGrek/ReactAvengers",
+    websiteLink: "https://dimkagrek.github.io/ReactAvengers/",
+    technologies: [
+      { name: "HTML5", icon: <FaHtml5 className="text-orange-500" /> },
+      { name: "CSS3", icon: <FaCss3Alt className="text-blue-700" /> },
+      { name: "JavaScript", icon: <FaJsSquare className="text-yellow-500" /> },
+      { name: "React", icon: <FaReact className="text-blue-500" /> },
+      { name: "Axios", icon: <SiAxios className="text-blue-800" /> },
+      { name: "Webpack", icon: <SiWebpack className="text-blue-400" /> },
+      { name: "Git", icon: <BsGit className="text-gray-400" /> },
+      { name: "Trello", icon: <BsTrello className="text-cyan-600" /> },
+    ],
+  },
+
+  {
     title: "Food Boutique",
+    category: "JavaScript",
     answerable: `section "Footer".`,
     image: food,
     description: `"Food Boutique" is an online store specializing in organic products, offering users the ability to search, sort, view, and order a wide range of items. Detailed product descriptions and high-quality images provide a clear understanding of each item.`,
